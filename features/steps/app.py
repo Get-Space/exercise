@@ -1,17 +1,21 @@
-from behave import given, when, then
+from behave import given, then, when
 
-@when('I retrieve user {username}')
+
+@when("I retrieve user {username}")
 def step_impl(context, username):
-    context.response = context.api.get(f'/user/{username}')
+    context.response = context.api.get(f"/user/{username}")
 
-@then('I receive user {username}')
+
+@then("I receive user {username}")
 def step_impl(context, username):
-    assert context.response.json()['user']['username'] == username
+    assert context.response.json()["user"]["username"] == username
 
-@when('A GitHub Webhook is received for user {username}')
+
+@when("A GitHub Webhook is received for user {username}")
 def step_impl(context, username):
-    context.response = context.api.post('/github_webhook', json={'username': username})
+    context.response = context.api.post("/github_webhook", json={"username": username})
 
-@then('I receive the next question')
+
+@then("I receive the next question")
 def step_impl(context):
-    assert 'next_question' in context.response.json()
+    assert "next_question" in context.response.json()

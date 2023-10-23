@@ -1,14 +1,10 @@
 class MockDatabase:
     def __init__(self):
-        self._users = {
-            'test': {
-                'username': 'test'
-            }
-        }
+        self._users = {"test": {"username": "test"}}
         self._questions = {
-            '1': 'What is your favorite color?',
-            '2': 'What is your favorite animal?',
-            '3': 'What is your favorite food?'
+            "1": "What is your favorite color?",
+            "2": "What is your favorite animal?",
+            "3": "What is your favorite food?",
         }
         self._responses = {}
 
@@ -37,7 +33,7 @@ class MockDatabase:
         return self._responses.get(id)
 
     def get_responses_for_user(self, username):
-        return [r for r in self._responses if r['user'] == username]
+        return [r for r in self._responses if r["user"] == username]
 
     def save_response(self, id, question):
         self._responses[id] = question
