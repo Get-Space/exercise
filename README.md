@@ -20,3 +20,19 @@ Create a fork of this repo and for each of the steps below make a code change an
 4. For each route in the API add logging of when the request began and when it ended.
 5. Describe any changes you would make to this code to make it better. Update the README
    below this step with your description of changes.
+   
+   ### Proposed Code Improvements:
+   
+   1. Change all function definitions in `main_router` to use `async def` for better asynchronous support.
+   
+   2. Refactor the code by creating a `Service` class and a `Repository` class to abstract and manage interactions with the database. This will improve code organization and maintainability.
+   
+   3. Implement a pre-commit hook to execute all tests before making a commit, ensuring code quality and consistency.
+   
+   4. Enhance the folder structure for better code organization and maintainability, possibly following a recommended project structure.
+   
+   5. Replace the use of `requirements.txt` and virtual environments with Poetry for more efficient package management and dependency resolution.
+   
+   6. Explicitly specify data types for variables and return types for functions to improve code readability and maintainability.
+
+
