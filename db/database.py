@@ -4,7 +4,7 @@ class MockDatabase:
         self._questions = {
             "1": {"question": "What is your favorite color?", "weight": 1000},
             "2": {"question": "What is your favorite animal?", "weight": 1000},
-            "3": {"question": "What is your favorite food?", "weight": 100}
+            "3": {"question": "What is your favorite food?", "weight": 100},
         }
         self._responses = {}
 
