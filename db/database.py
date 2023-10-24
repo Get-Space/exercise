@@ -2,9 +2,9 @@ class MockDatabase:
     def __init__(self):
         self._users = {"test": {"username": "test"}}
         self._questions = {
-            "1": "What is your favorite color?",
-            "2": "What is your favorite animal?",
-            "3": "What is your favorite food?",
+            "1": {"question": "What is your favorite color?", "weight": 1000},
+            "2": {"question": "What is your favorite animal?", "weight": 1000},
+            "3": {"question": "What is your favorite food?", "weight": 100}
         }
         self._responses = {}
 

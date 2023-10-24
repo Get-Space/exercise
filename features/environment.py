@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 
-from router.main_router import app
+from router.app import app
 
 
 def before_scenario(context, feature):
